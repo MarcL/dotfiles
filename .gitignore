@@ -1,3 +1,4 @@
+# atom
 atom.symlink/.apm
 atom.symlink/.node-gyp
 atom.symlink/.storage
@@ -7,4 +8,15 @@ atom.symlink/packages
 atom.symlink/storage
 atom.symlink/themes
 
+# private files
 git/gitconfig.local.symlink
+private
+
+# folder view config files
+.DS_Store
+
+# working files
+.vim/viminfo
+.vim/swaps/*
+.vim/undo
+
