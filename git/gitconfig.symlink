@@ -89,6 +89,3 @@
         smudge = git-lfs smudge %f
         required = true
 [http]
-[user]
-	name = Craig Jones
-	email = craigkjones@gmail.com
