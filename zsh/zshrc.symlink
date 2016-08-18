@@ -52,7 +52,7 @@ unset config_files
 eval "$(fasd --init auto)"
 
 # Set prompt pattern
-export PS1='[craigkj %~] '
+export PS1='[marcl %~] '
 
 # link gpg-agent and pinentry
 #if test -f ~/.gnupg/.gpg-agent-info -a -n "$(pgrep gpg-agent)"; then
