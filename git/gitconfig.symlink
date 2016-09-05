@@ -3,7 +3,7 @@
         up = pull
         p = push
         s = status -s
-        st = status -s
+        st = status
         brv = branch -v
         sclone = clone --depth=1
         co = checkout
