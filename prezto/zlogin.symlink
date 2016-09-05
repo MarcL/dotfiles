@@ -13,8 +13,3 @@
     zcompile "$zcompdump"
   fi
 } &!
-
-# Amooga
-if (( $+commands[cowsay] && $+commands[fortune] )); then
-    fortune -sa | cowsay
-fi
