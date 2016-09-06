@@ -51,9 +51,6 @@ unset config_files
 # enable fasd https://github.com/clvv/fasd
 eval "$(fasd --init auto)"
 
-# Set prompt pattern
-export PS1='[marcl %~] '
-
 # link gpg-agent and pinentry
 #if test -f ~/.gnupg/.gpg-agent-info -a -n "$(pgrep gpg-agent)"; then
 #  source ~/.gnupg/.gpg-agent-info
