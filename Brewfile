@@ -8,7 +8,10 @@ tap 'homebrew/dupes'
 brew 'nvm'
 brew 'diff-so-fancy'
 brew 'fasd'
+brew 'ffmpeg', args: ['with-libass', 'with-fontconfig']
+brew 'giflossy'
 brew 'git'
+brew 'imagemagick', args: ['with-fontconfig']
 brew 'jenv'
 brew 'pyenv'
 brew 'rbenv'
