@@ -12,6 +12,7 @@ brew 'ffmpeg', args: ['with-libass', 'with-fontconfig']
 brew 'giflossy'
 brew 'git'
 brew 'git-standup'
+brew 'gnupg'
 brew 'imagemagick', args: ['with-fontconfig']
 brew 'jenv'
 brew 'pyenv'
