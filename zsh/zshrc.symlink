@@ -78,3 +78,9 @@ jenv() {
     command jenv "$command" "$@";;
   esac
 }
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/littlm07/.nvm/versions/node/v6.11.1/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/littlm07/.nvm/versions/node/v6.11.1/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/littlm07/.nvm/versions/node/v6.11.1/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/littlm07/.nvm/versions/node/v6.11.1/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
