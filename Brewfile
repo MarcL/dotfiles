@@ -22,6 +22,7 @@ brew 'zsh'
 
 cask 'alfred'
 cask 'docker'
+cask 'dropbox'
 cask 'evernote'
 cask 'firefox'
 cask 'flux'
