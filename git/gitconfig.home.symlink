@@ -1,0 +1,5 @@
+[user]
+        name = Marc Littlemore
+        email = marc.littlemore@gmail.com
+[credential]
+        helper = osxkeychain

@@ -81,6 +81,9 @@
 [include]
         path = ~/.gitconfig.local
 
+[includeIf "gitdir/i:~/projects/**"]
+        path = ~/.gitconfig.home
+
 [init]
         # templatedir = ~/.git_template
 
