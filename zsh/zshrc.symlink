@@ -86,3 +86,7 @@ jenv() {
 [[ -f /Users/littlm07/.nvm/versions/node/v6.11.1/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/littlm07/.nvm/versions/node/v6.11.1/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
 
 eval "$(rbenv init -)"
+
+# Disable autocorrect
+# https://coderwall.com/p/jaoypq/disabling-autocorrect-in-zsh
+unsetopt correct
