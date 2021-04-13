@@ -6,9 +6,46 @@ set -e
 
 cd "$(dirname $0)"/..
 
-# Run Homebrew through the Brewfile
-echo "› brew bundle"
-brew bundle
+unameOut="$(uname -s)"
+case "${unameOut}" in
+    Linux*)     machine=Linux;;
+    Darwin*)    machine=Mac;;
+    CYGWIN*)    machine=Cygwin;;
+    MINGW*)     machine=MinGw;;
+    *)          machine="UNKNOWN:${unameOut}"
+esac
+echo "OS: ${machine}"
+
+if [ $machine == "Darwin" ]
+then
+    # Run Homebrew through the Brewfile
+    echo "Installing Brew files"
+    brew bundle
+elif [ $machine == "Linux" ]
+then
+    # TODO: Move these to a script file
+    echo "Install Linux packages"
+
+    # Install nvm
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+
+    # Allow us to use nvm
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    nvm install --lts
+
+    # Install diff-so-fancy as global packagage
+    npm install -g diff-so-fancy
+
+    # Needed to add fasd
+    sudo add-apt-repository ppa:aacebedo/fasd -y
+
+    sudo apt install zsh git -y
+    sudo apt-get install fasd -y
+fi
 
 # find the installers and run them iteratively
 find . -name install.sh | while read installer ; do echo "Running $installer" && sh -c "${installer}" ; done
+
+# Change shell
+chsh -s $(which zsh)

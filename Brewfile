@@ -9,13 +9,8 @@ brew 'diff-so-fancy'
 brew 'fasd'
 brew 'ffmpeg', args: ['with-libass', 'with-fontconfig']
 brew 'git'
-brew 'gnupg'
-brew 'imagemagick', args: ['with-fontconfig']
-brew 'jenv'
-brew 'jrnl'
 brew 'pyenv'
 brew 'rbenv'
-brew 'tree'
 brew 'zsh'
 
 cask 'alfred'
