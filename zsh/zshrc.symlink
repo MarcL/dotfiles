@@ -59,34 +59,6 @@ eval "$(fasd --init auto)"
 #  eval $(gpg-agent --daemon --write-env-file ~/.gnupg/.gpg-agent-info)
 #fi
 
-export PATH="/Users/littlm07/.jenv/shims:${PATH}"
-source "/usr/local/Cellar/jenv/0.5.2/libexec/completions/jenv.zsh"
-jenv rehash 2>/dev/null
-export JENV_LOADED=1
-unset JAVA_HOME
-jenv() {
-  typeset command
-  command="$1"
-  if [ "$#" -gt 0 ]; then
-    shift
-  fi
-
-  case "$command" in
-  enable-plugin|rehash|shell|shell-options)
-    eval `jenv "sh-$command" "$@"`;;
-  *)
-    command jenv "$command" "$@";;
-  esac
-}
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/littlm07/.nvm/versions/node/v6.11.1/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/littlm07/.nvm/versions/node/v6.11.1/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/littlm07/.nvm/versions/node/v6.11.1/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/littlm07/.nvm/versions/node/v6.11.1/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
-
-eval "$(rbenv init -)"
-
 # Disable autocorrect
 # https://coderwall.com/p/jaoypq/disabling-autocorrect-in-zsh
 unsetopt correct
