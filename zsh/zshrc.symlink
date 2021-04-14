@@ -62,3 +62,10 @@ eval "$(fasd --init auto)"
 # Disable autocorrect
 # https://coderwall.com/p/jaoypq/disabling-autocorrect-in-zsh
 unsetopt correct
+
+# Enable keychain for Linux
+if [ $(uname -s) == "Linux" ]
+then
+  /usr/bin/keychain -q --nogui $HOME/.ssh/id_ed25519
+  source $HOME/.keychain/$HOST-sh
+fi
