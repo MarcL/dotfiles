@@ -80,12 +80,16 @@
 [push]
         default = current
 
+
 # use separate file for username / github token / etc
 [include]
-        path = ~/.gitconfig.local
+       path = ~/.gitconfig.local
 
-[includeIf "gitdir/i:~/projects/**"]
+[includeIf "gitdir/i:~/projects/"]
         path = ~/.gitconfig.home
+
+[includeIf "gitdir/i:~/dev/"]
+        path = ~/.gitconfig.work
 
 [init]
         # templatedir = ~/.git_template
@@ -97,6 +101,3 @@
 [http]
 [pull]
 	rebase = false
-[user]
-	email = marc.littlemore@gmail.com
-	name = Marc Littlemore
