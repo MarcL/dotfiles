@@ -92,6 +92,7 @@
         path = ~/.gitconfig.work
 
 [init]
+	defaultBranch = main
         # templatedir = ~/.git_template
 
 [filter "lfs"]
