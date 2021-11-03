@@ -16,7 +16,7 @@ case "${unameOut}" in
 esac
 echo "OS: ${machine}"
 
-if [ $machine == "Darwin" ]
+if [ $machine == "Mac" ]
 then
     # Run Homebrew through the Brewfile
     echo "Installing Brew files"
