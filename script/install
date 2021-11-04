@@ -16,7 +16,7 @@ case "${unameOut}" in
 esac
 echo "OS: ${machine}"
 
-if [ $machine == "Darwin" ]
+if [ $machine == "Mac" ]
 then
     # Run Homebrew through the Brewfile
     echo "Installing Brew files"
@@ -27,7 +27,7 @@ then
     echo "Install Linux packages"
 
     # Install nvm
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 
     # Allow us to use nvm
     export NVM_DIR="$HOME/.nvm"
