@@ -69,3 +69,5 @@ then
   /usr/bin/keychain -q --nogui $HOME/.ssh/id_ed25519
   source $HOME/.keychain/$HOST-sh
 fi
+
+alias hist="history 1"
