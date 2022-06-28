@@ -324,6 +324,15 @@
             "appdir": "/Applications"
           }
         }
+      },
+      "notion": {
+        "version": "2.1.0",
+        "options": {
+          "full_name": "notion",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
       }
     }
   },
