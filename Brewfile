@@ -22,6 +22,7 @@ cask 'raycast'
 cask 'rectangle'
 cask 'slack'
 cask 'spotify'
+cask 'todoist'
 cask 'visual-studio-code'
 cask 'whatsapp'
 

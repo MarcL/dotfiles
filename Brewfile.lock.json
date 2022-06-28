@@ -333,6 +333,15 @@
             "appdir": "/Applications"
           }
         }
+      },
+      "todoist": {
+        "version": "8.0.7",
+        "options": {
+          "full_name": "todoist",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
       }
     }
   },
