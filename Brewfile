@@ -12,6 +12,7 @@ brew 'pyenv'
 brew 'rbenv'
 brew 'zsh'
 
+cask 'cron'
 cask 'google-chrome'
 cask 'grammarly'
 cask 'iterm2'
@@ -25,4 +26,4 @@ cask 'spotify'
 cask 'todoist'
 cask 'visual-studio-code'
 cask 'whatsapp'
-
+cask 'zoom'
