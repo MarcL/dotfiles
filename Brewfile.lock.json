@@ -369,6 +369,15 @@
             "appdir": "/Applications"
           }
         }
+      },
+      "rocket": {
+        "version": "1.9,80",
+        "options": {
+          "full_name": "rocket",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
       }
     }
   },
@@ -377,9 +386,9 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.5.3",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "00076892f7752b22b80c5e8479496f7dd06a3d9e",
-        "CLT": "13.0.0.0.1.1627064638",
-        "Xcode": "13.2.1",
+        "Homebrew/homebrew-core": "0f8b335addcf7004050127fffebfbf15566ba4f1",
+        "CLT": "13.4.0.0.1.1651278267",
+        "Xcode": "13.4",
         "macOS": "12.4"
       }
     }
