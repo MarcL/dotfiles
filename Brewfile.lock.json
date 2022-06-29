@@ -2,10 +2,10 @@
   "entries": {
     "tap": {
       "homebrew/cask": {
-        "revision": "c5e9ba34f4bb7f95519a97aaab7b35e65255baa6"
+        "revision": "1013f9a86bbb900e16ceb216e0ed7bb6a8d210ea"
       },
       "homebrew/cask-versions": {
-        "revision": "f91248e364f8340a6d0d45a87bff184aad6fb317"
+        "revision": "72d32435d7bcdb307dae3935011140886d62138e"
       },
       "homebrew/bundle": {
         "revision": "c5686db55e69b4ac128a28bbcd8a571c4ac76112"
@@ -272,7 +272,7 @@
         }
       },
       "rectangle": {
-        "version": "0.56,62",
+        "version": "0.57,63",
         "options": {
           "full_name": "rectangle",
           "args": {
@@ -342,6 +342,33 @@
             "appdir": "/Applications"
           }
         }
+      },
+      "cron": {
+        "version": "1.108.0",
+        "options": {
+          "full_name": "cron",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "zoom": {
+        "version": "5.11.1.8356",
+        "options": {
+          "full_name": "zoom",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "raindropio": {
+        "version": "5.5.1",
+        "options": {
+          "full_name": "raindropio",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
       }
     }
   },
@@ -350,7 +377,7 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.5.3",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "53b24f6e16b8859b5d318e5fa861795b951950f0",
+        "Homebrew/homebrew-core": "00076892f7752b22b80c5e8479496f7dd06a3d9e",
         "CLT": "13.0.0.0.1.1627064638",
         "Xcode": "13.2.1",
         "macOS": "12.4"
