@@ -71,3 +71,8 @@ then
 fi
 
 alias hist="history 1"
+
+# Fix for running Puppeteer on an M1
+# First run brew install chromium
+export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+export PUPPETEER_EXECUTABLE_PATH=`which chromium`
