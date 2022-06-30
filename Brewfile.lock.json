@@ -2,13 +2,13 @@
   "entries": {
     "tap": {
       "homebrew/cask": {
-        "revision": "cae8b51751c7bcdffcf706f33de365a1dea31891"
+        "revision": "73c15bfa4be1943b30ee01f751e83e842b4038f6"
       },
       "homebrew/cask-versions": {
-        "revision": "b1f06869688681534dcc00f84c10a6dae0009266"
+        "revision": "39e8a1aa6e75bb459c9dee043237a98654e6dc6e"
       },
       "homebrew/bundle": {
-        "revision": "c5686db55e69b4ac128a28bbcd8a571c4ac76112"
+        "revision": "405a37682136ac236a3146fdad51d17e07515b9a"
       }
     },
     "brew": {
@@ -256,7 +256,7 @@
         }
       },
       "postman": {
-        "version": "9.19.0",
+        "version": "9.22.2",
         "options": {
           "full_name": "postman",
           "args": {
@@ -265,7 +265,7 @@
         }
       },
       "raycast": {
-        "version": "1.36.1",
+        "version": "1.37.1",
         "options": {
           "full_name": "raycast",
           "args": {
@@ -389,6 +389,15 @@
             "appdir": "/Applications"
           }
         }
+      },
+      "1password": {
+        "version": "8.7.1",
+        "options": {
+          "full_name": "1password",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
       }
     }
   },
@@ -397,7 +406,7 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.5.3",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "5eda63b58dafb449635ef5079bd80dbd0d9d4c80",
+        "Homebrew/homebrew-core": "f817e1de284974ac14f8ae05de0a4d864389a7c3",
         "CLT": "13.4.0.0.1.1651278267",
         "Xcode": "13.4",
         "macOS": "12.4"

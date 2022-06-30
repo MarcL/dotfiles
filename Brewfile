@@ -12,6 +12,7 @@ brew 'pyenv'
 brew 'rbenv'
 brew 'zsh'
 
+cask '1password'
 cask 'chromium'
 cask 'cron'
 cask 'google-chrome'
