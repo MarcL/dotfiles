@@ -4,6 +4,7 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 
+brew 'deno'
 brew 'diff-so-fancy'
 brew 'fasd'
 brew 'git'
