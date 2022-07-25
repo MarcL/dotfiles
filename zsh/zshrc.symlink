@@ -76,3 +76,14 @@ alias hist="history 1"
 # First run brew install chromium
 export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 export PUPPETEER_EXECUTABLE_PATH=`which chromium`
+# bun completions
+[ -s "/Users/marclittlemore/.bun/_bun" ] && source "/Users/marclittlemore/.bun/_bun"
+
+# Bun
+export BUN_INSTALL="/Users/marclittlemore/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
