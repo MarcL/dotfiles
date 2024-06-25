@@ -3,11 +3,11 @@ cask_args appdir: '/Applications'
 tap 'homebrew/bundle'
 
 brew 'diff-so-fancy'
-# brew 'fasd' # Deprecated but would like to find a replacement
 brew 'gh'
 brew 'git'
 brew 'nvm'
 brew 'pyenv'
+brew 'zoxide'
 brew 'zsh'
 
 cask '1password'
