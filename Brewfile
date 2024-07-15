@@ -11,6 +11,7 @@ brew 'zoxide'
 brew 'zsh'
 
 cask '1password'
+cask 'docker'
 cask 'google-chrome'
 cask 'insomnia'
 cask 'iterm2'
