@@ -104,3 +104,9 @@
 	rebase = false
 [fetch]
 	prune = true
+[user]
+	signingkey = /Users/marclittlemore/.ssh/id_ed25519
+[commit]
+	gpgsign = true
+[gpg]
+	format = ssh
