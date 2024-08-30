@@ -17,6 +17,7 @@ cask 'insomnia'
 cask 'iterm2'
 cask 'logi-options-plus' # Logitech Options+
 cask 'netnewswire'
+cask 'notion'
 cask 'notion-calendar'
 cask 'obsidian'
 cask 'raindropio'
