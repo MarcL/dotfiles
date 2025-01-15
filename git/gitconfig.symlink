@@ -79,6 +79,7 @@
 # push easily. http://stackoverflow.com/a/23918418/89484
 [push]
         default = current
+	autoSetupRemote = true
 
 
 # use separate file for username / github token / etc
