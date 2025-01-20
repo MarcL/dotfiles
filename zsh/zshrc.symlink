@@ -80,6 +80,9 @@ export PUPPETEER_EXECUTABLE_PATH=`which chromium`
 export BUN_INSTALL="/Users/marclittlemore/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+# Kubectl krew
+export PATH="${KREW_ROOT:-$HOME/.krew}:$PATH"
+
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
@@ -87,3 +90,9 @@ eval "$(pyenv init -)"
 
 # Enable zoxide
 eval "$(zoxide init zsh)"
+
+# Enable Kube PS1 - https://github.com/jonmosco/kube-ps1
+source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
+PS1='$(kube_ps1)'$PS1
+
+source "$ZSH/zsh/n8n.sh"
