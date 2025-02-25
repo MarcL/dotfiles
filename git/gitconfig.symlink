@@ -72,15 +72,6 @@
         pushInsteadOf = "git://gist.github.com/"
         pushInsteadOf = "https://gist.github.com/"
 
-# correct typos
-[help]
-        autocorrect = 1
-
-# push easily. http://stackoverflow.com/a/23918418/89484
-[push]
-        default = current
-
-
 # use separate file for username / github token / etc
 [include]
        path = ~/.gitconfig.local
@@ -93,7 +84,6 @@
 
 [init]
 	defaultBranch = main
-        # templatedir = ~/.git_template
 
 [filter "lfs"]
         clean = git-lfs clean %f
@@ -102,11 +92,37 @@
 [http]
 [pull]
 	rebase = false
-[fetch]
-	prune = true
 [user]
 	signingkey = /Users/marclittlemore/.ssh/id_ed25519
-[commit]
-	gpgsign = true
 [gpg]
 	format = ssh
+
+
+# Trying out some new git config from this blog post:
+# https://blog.gitbutler.com/how-git-core-devs-configure-git/
+
+[column]
+        ui = auto
+[branch]
+        sort = -committerdate
+[tag]
+        sort = version:refname
+[diff]
+        algorithm = histogram
+        colorMoved = plain
+        mnemonicPrefix = true
+        renames = true
+[push]
+        default = simple
+        autoSetupRemote = true
+        followTags = true
+[fetch]
+        prune = true
+        pruneTags = true
+        all = true
+[help]
+        autocorrect = prompt
+
+[commit]
+	gpgsign = true
+        verbose = true
