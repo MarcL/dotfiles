@@ -148,7 +148,76 @@ function switch_namespace() {
   kubectl config set-context --current --namespace="$username"
 }
 
+#
+# Switches Kubernetes context and namespace.
+# Fetches Azure credentials if the context doesn't exist.
+# Usage: kswitch <context_name> <namespace_name>
+#
+switch_user() {
+    # --- Configuration ---
+    local RESOURCE_GROUP="spokes-gwc"
+
+    # --- Colors for output ---
+    local GREEN='\033[0;32m'
+    local YELLOW='\033[1;33m'
+    local RED='\033[0;31m'
+    local NC='\033[0m'
+
+    # 1. Check for required tools
+    if ! command -v kubectl &> /dev/null || ! command -v az &> /dev/null; then
+        echo -e "${RED}Error: 'kubectl' and 'az' commands must be installed.${NC}"
+        return 1
+    fi
+
+    # 2. Validate input arguments
+    if [ "$#" -ne 2 ]; then
+        echo -e "${RED}Error: You must provide a context and a namespace.${NC}"
+        echo -e "${YELLOW}Usage:${NC} kswitch <context_name> <namespace_name>"
+        return 1
+    fi
+
+    local CONTEXT_NAME="$1"
+    local NAMESPACE="$2"
+
+    echo -e "▶️  Attempting to switch to context '${YELLOW}${CONTEXT_NAME}${NC}'..."
+
+    # 3. Check if context exists, otherwise fetch it
+    if ! kubectl config use-context "$CONTEXT_NAME" &> /dev/null; then
+        echo -e "${YELLOW}ℹ️  Context not found. Fetching credentials from Azure...${NC}"
+        
+        az aks get-credentials --resource-group "$RESOURCE_GROUP" --name "$CONTEXT_NAME" --public-fqdn
+        
+        if [ $? -ne 0 ]; then
+            echo -e "${RED}❌ Error getting credentials for '${CONTEXT_NAME}'.${NC}"
+            return 1
+        fi
+        echo -e "${GREEN}✅ Credentials fetched successfully.${NC}"
+        
+        # Verify context switch after fetching
+        if ! kubectl config use-context "$CONTEXT_NAME" &> /dev/null; then
+            echo -e "${RED}❌ Error: Still cannot switch to context '${CONTEXT_NAME}'.${NC}"
+            return 1
+        fi
+    else
+        echo -e "${GREEN}✅ Context '${CONTEXT_NAME}' already exists and is now selected.${NC}"
+    fi
+
+    # 4. Switch to the desired namespace
+    echo -e "▶️  Switching to namespace '${YELLOW}${NAMESPACE}${NC}'..."
+    if kubectl config set-context --current --namespace="$NAMESPACE" &> /dev/null; then
+        echo -e "${GREEN}✅ Successfully set namespace to '${NAMESPACE}'.${NC}"
+    else
+        echo -e "${RED}❌ Error setting namespace '${NAMESPACE}'. Please check if it exists.${NC}"
+        return 1
+    fi
+
+    echo -e "\n${GREEN}🚀 All done! Your current settings are:${NC}"
+    echo -n "Context: " && kubectl config current-context
+    echo -n "Namespace: " && kubectl config view --minify --output 'jsonpath={..namespace}' && echo ""
+}
+
 alias n8n.cloud.ns=switch_namespace
+alias n8n.cloud.user.switch=switch_user
 alias n8n.cloud.backups=list_backups
 alias n8n.cloud.prune.max_age=check_data_age
 alias n8n.cloud.prune.max_count=check_prune_count
