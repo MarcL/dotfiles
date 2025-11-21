@@ -96,3 +96,7 @@ source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
 PS1='$(kube_ps1)'$PS1
 
 source "$ZSH/zsh/n8n.sh"
+
+# Remove background colour for highligting plugin so I can read it properly!
+ZSH_HIGHLIGHT_STYLES[command]='bold'
+ZSH_HIGHLIGHT_STYLES[alias]='bold'
