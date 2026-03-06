@@ -81,27 +81,19 @@ export BUN_INSTALL="/Users/marclittlemore/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Kubectl krew
-# export PATH="${KREW_ROOT:-$HOME/.krew}:$PATH"
+export PATH="${KREW_ROOT:-$HOME/.krew}:$PATH"
 
-# pyenv — lazy-loaded, only initialises on first use
+# pyenv
 export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-pyenv() {
-  unset -f pyenv python python3 pip pip3
-  eval "$(command pyenv init -)"
-  pyenv "$@"
-}
-python() { pyenv; python "$@"; }
-python3() { pyenv; python3 "$@"; }
-pip() { pyenv; pip "$@"; }
-pip3() { pyenv; pip3 "$@"; }
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 # Enable zoxide
 eval "$(zoxide init zsh)"
 
 # Enable Kube PS1 - https://github.com/jonmosco/kube-ps1
-# source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
-# PS1='$(kube_ps1)'$PS1
+source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
+PS1='$(kube_ps1)'$PS1
 
 source "$ZSH/zsh/n8n.sh"
 
