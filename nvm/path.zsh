@@ -1,1 +1,1 @@
-export NVM_DIR="$HOME/.nvm"
+# NVM_DIR is set in nvm.zsh

@@ -33,7 +33,6 @@ zstyle ':prezto:load' pmodule \
   'utility' \
   'completion' \
   'archive' \
-  'node' \
   'tmux' \
   'git' \
   'syntax-highlighting' \
