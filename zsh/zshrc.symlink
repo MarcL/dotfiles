@@ -91,9 +91,10 @@ eval "$(pyenv init -)"
 # Enable zoxide
 eval "$(zoxide init zsh)"
 
+# Disable this for now until I need it
 # Enable Kube PS1 - https://github.com/jonmosco/kube-ps1
-source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
-PS1='$(kube_ps1)'$PS1
+# source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
+# PS1='$(kube_ps1)'$PS1
 
 source "$ZSH/zsh/n8n.sh"
 
@@ -106,3 +107,6 @@ export DOCKER_HOST="unix://${HOME}/.colima/default/docker.sock"
 export TESTCONTAINERS_HOST_OVERRIDE=127.0.0.1
 export TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE=/var/run/docker.sock
 export TESTCONTAINERS_RYUK_DISABLED=true
+
+# opencode
+export PATH=/Users/marclittlemore/.opencode/bin:$PATH
