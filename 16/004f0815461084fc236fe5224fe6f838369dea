@@ -1,0 +1,24 @@
+zsh/zshrc.symlink
+  s_81d9dcf3e9d498::t_e1d3b961ffd1d3 131-132
+  s_81d9dcf3e9d498::t_c1860a744689cf 130
+  s_81d9dcf3e9d498::t_c407ffdf18e130 127-129
+  s_81d9dcf3e9d498::t_ea47e3e2730c47 113-126
+nvm/nvm.zsh
+  s_81d9dcf3e9d498::t_c79ef5aa762993 2-5,7,9,13-23
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "16004f0815461084fc236fe5224fe6f838369dea",
+  "prompts": {},
+  "sessions": {
+    "s_81d9dcf3e9d498": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "01a08a3f-3a0e-7665-9842-f99f552e5aa9",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "MarcL <marc.littlemore@gmail.com>"
+    }
+  }
+}
