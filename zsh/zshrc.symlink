@@ -110,3 +110,23 @@ export TESTCONTAINERS_RYUK_DISABLED=true
 
 # opencode
 export PATH=/Users/marclittlemore/.opencode/bin:$PATH
+
+# Added by git-ai installer on Thu  7 May 2026 14:07:47 BST
+export PATH="/Users/marclittlemore/.git-ai/bin:$PATH"
+
+# cubic
+export PATH="/Users/marclittlemore/.cubic/bin":$PATH
+
+# Add personal scripts to PATH
+export PATH="$HOME/dev/scripts:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/marclittlemore/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# Apply node version (default or .nvmrc) for the shell's starting directory
+if typeset -f load-nvm-startup >/dev/null; then load-nvm-startup; fi

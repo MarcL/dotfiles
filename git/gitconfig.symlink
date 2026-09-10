@@ -126,3 +126,6 @@
 [commit]
 	gpgsign = true
         verbose = true
+[trace2]
+	eventTarget = af_unix:stream:/Users/marclittlemore/.git-ai/internal/daemon/trace2.sock
+	eventNesting = 0
